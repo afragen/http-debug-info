@@ -3,7 +3,7 @@
  * Plugin Name: HTTP Debug Info
  * Plugin URL: https://github.com/afragen/http-debug-info
  * Description: Plugin to display HTTP headers in thickbox.
- * Version: 0.1
+ * Version: 0.2
  * Author: Andy Fragen
  * License: MIT
  * GitHub Plugin URI: https://github.com/afragen/http-debug-info
@@ -12,7 +12,7 @@
 add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) {
 	$skips = array( 'wordpress.org', 'wp-cron.php' );
 	foreach ( $skips as $skip ) {
-		if ( stripos( $url, $skip)){
+		if ( stripos( $url, $skip ) ) {
 			return;
 		}
 	}

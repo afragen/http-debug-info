@@ -3,7 +3,7 @@
  * Plugin Name: HTTP Debug Info
  * Plugin URL: https://github.com/afragen/http-debug-info
  * Description: Plugin to display HTTP headers in thickbox.
- * Version: 0.2
+ * Version: 0.3
  * Author: Andy Fragen
  * License: MIT
  * GitHub Plugin URI: https://github.com/afragen/http-debug-info

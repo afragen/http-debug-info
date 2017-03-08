@@ -10,13 +10,14 @@
  */
 
 add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) {
-	$skips = array( 'wordpress.org', 'wp-cron.php' );
+	$skips = array( 'wordpress.org', $_SERVER['HTTP_HOST'] );
 	foreach ( $skips as $skip ) {
 		if ( stripos( $url, $skip ) ) {
 			return;
 		}
 	}
 	add_thickbox();
+
 	?>
 	<div id="http-debug-id-<?php echo md5( $url ); ?>" class="thickbox" style="display:none;">
 		<p>

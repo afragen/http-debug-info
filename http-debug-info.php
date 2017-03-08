@@ -24,6 +24,8 @@ add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) 
 		<p>
 			<strong>HTTP Debug Information</strong>
 			<?php
+			print_r( '<pre>' . 'Request Type:' . "\n" . json_encode( $type, 128 | 64 ) . '</pre>' );
+			print_r( '<pre>' . 'Request Class:' . "\n" . json_encode( $class, 128 | 64 ) . '</pre>' );
 			print_r( '<pre>' . 'Request URL:' . "\n" . json_encode( $url, 128 | 64 ) . '</pre>' );
 			print_r( '<pre>' . 'Request Args:' . "\n" . json_encode( $args, 128 | 64 ) . '</pre>' );
 			print_r( '<pre>' . 'Request Response:' . "\n" . json_encode( $response, 128 | 64 ) . '</pre>' );

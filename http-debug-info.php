@@ -22,14 +22,15 @@ add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) 
 		<p>
 			<strong>HTTP Debug Information</strong>
 			<?php
-			var_dump( "\n" . 'Request URL:' . json_encode( $url, 128 | 64 ) );
-			var_dump( "\n" . 'Request Args:' . json_encode( $args, 128 | 64 ) );
-			var_dump( "\n" . 'Request Response:' . json_encode( $response, 128 | 64 ) );
+			print_r( '<pre>' . 'Request URL:' . "\n" . json_encode( $url, 128 | 64 ) . '</pre>' );
+			print_r( '<pre>' . 'Request Args:' . "\n" . json_encode( $args, 128 | 64 ) . '</pre>' );
+			print_r( '<pre>' . 'Request Response:' . "\n" . json_encode( $response, 128 | 64 ) . '</pre>' );
 			?>
 		</p>
 	</div>
 
-	<a href="#TB_inline?width=600&height=550&inlineId=http-debug-id-<?php echo md5( $url ); ?>" class="thickbox" style="padding-right: 3em;">View HTTP Debug content!</a>
+	<a href="#TB_inline?width=600&height=550&inlineId=http-debug-id-<?php echo md5( $url ); ?>" class="thickbox" style="padding-right: 3em;clear:both;">View HTTP Debug content!</a>
+	<br>
 	<?php
 }
 	, 15, 5 );

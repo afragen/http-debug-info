@@ -9,6 +9,8 @@
  * GitHub Plugin URI: https://github.com/afragen/http-debug-info
  */
 
+register_activation_hook( __FILE__, '__return_false' );
+
 add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) {
 	$skips = array( 'wordpress.org', 'wp-cron.php' );
 	foreach ( $skips as $skip ) {

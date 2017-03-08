@@ -10,8 +10,11 @@
  */
 
 add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) {
-	if ( stripos( $url, 'wordpress.org' ) ) {
-		return;
+	$skips = array( 'wordpress.org', 'wp-cron.php' );
+	foreach ( $skips as $skip ) {
+		if ( stripos( $url, $skip)){
+			return;
+		}
 	}
 	add_thickbox();
 	?>

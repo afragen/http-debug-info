@@ -3,7 +3,7 @@
  * Plugin Name: HTTP Debug Info
  * Plugin URL: https://github.com/afragen/http-debug-info
  * Description: Plugin to display HTTP headers in thickbox.
- * Version: 0.3
+ * Version: 0.4
  * Author: Andy Fragen
  * License: MIT
  * GitHub Plugin URI: https://github.com/afragen/http-debug-info
@@ -32,8 +32,7 @@ add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) 
 		</p>
 	</div>
 
-	<a href="#TB_inline?width=600&height=550&inlineId=http-debug-id-<?php echo md5( $url ); ?>" class="thickbox" style="padding-right: 3em;clear:both;">View HTTP Debug content!</a>
+	<a href="#TB_inline?width=600&height=550&inlineId=http-debug-id-<?php echo md5( $url ); ?>" class="thickbox" style="margin-left:30em;clear:both;">View HTTP Debug content!</a>
 	<br>
 	<?php
-}
-	, 15, 5 );
+}, 15, 5 );

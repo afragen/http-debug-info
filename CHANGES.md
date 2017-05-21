@@ -1,3 +1,7 @@
+#### 0.4 / 2017-05-21
+* moved display link to right
+* created branch to show current WordPress filters
+
 #### 0.3 / 2017-03-08
 * added remaining data to display
 * skip display of anything from host webserver

@@ -2,12 +2,12 @@
 /**
  * Plugin Name: HTTP Debug Info
  * Plugin URL: https://github.com/afragen/http-debug-info
- * Description: Plugin to display HTTP headers in thickbox.
+ * Description: Plugin to display current WordPress filters in thickbox.
  * Version: 0.4
  * Author: Andy Fragen
  * License: MIT
  * GitHub Plugin URI: https://github.com/afragen/http-debug-info
- * GitHub Branch: currrent-filters
+ * GitHub Branch: current-filters
  */
 
 add_action( 'http_api_debug', function( $response, $type, $class, $args, $url ) {
